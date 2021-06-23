@@ -20,13 +20,13 @@ mongoose.connect('mongodb+srv://Leenhazaimeh:banonano94@cluster0.nmvhr.mongodb.n
 
 
 
-seedUserData();
+// seedUserData();
 
 app.get('/books', getBooks);
 app.post('/book', createBook);
 app.put('/book/:book_idx', updateBook);
 app.delete('/book/:book_idx', deleteBook)
-app.listen(PORT);
+app.listen(PORT, () => {console.log(PORT)});
 
 
 

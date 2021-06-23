@@ -24,12 +24,12 @@ const seedUserData = () => {
 			{
 				name: 'The Lord Of The Rings',
 				description: 'The Lord of the Rings is the saga of a group of sometimes reluctant heroes who set forth to save their world from consummate evil.',
-				status: 'Downloaded'				
+				status: 'Downloaded'
 			},
 			{
 				name: 'Harry Potter',
 				description: 'Harry Potter, fictional character, a boy wizard created by British author J.K. Rowling. His coming-of-age exploits were the subject of seven enormously popular novels (1997–2007), which were adapted into eight films (2001–11); a play and a book of its script appeared in 2016.',
-				status: 'Available'				
+				status: 'Available'
 			},
 		]
 	});
@@ -38,4 +38,7 @@ const seedUserData = () => {
 
 }
 
-module.exports = userModel;
+module.exports = {
+	seedUserData,
+	userModel
+};
