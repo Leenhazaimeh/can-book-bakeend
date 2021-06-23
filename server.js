@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/myFavoriteBooks',
+mongoose.connect('mongodb+srv://Leenhazaimeh:banonano94@cluster0.nmvhr.mongodb.net/myfavoritebooks?retryWrites=true&w=majority',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
