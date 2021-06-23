@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const PORT = process.env.PORT;
 const {getBooks, createBook, updateBook, deleteBook} = require('./controllers/books.controller');
-const seedUserData  = require('./models/user.model');
+const {seedUserData } = require('./models/user.model');
 
 const cors = require('cors');
 app.use(cors());
@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://Leenhazaimeh:banonano94@cluster0.nmvhr.mongodb.n
 
 
 
-// seedUserData();
+seedUserData();
 
 app.get('/books', getBooks);
 app.post('/book', createBook);
