@@ -14,19 +14,19 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect(process.enve.MONGO_URL,
+mongoose.connect('mongodb://localhost:27017/myFavoriteBooks',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 
 
-seedUserData();
+// seedUserData();
 
 app.get('/books', getBooks);
 app.post('/book', createBook);
 app.put('/book/:book_idx', updateBook);
 app.delete('/book/:book_idx', deleteBook)
-app.listen(PORT);
+app.listen(PORT, () => {console.log(PORT)});
 
 
 
